@@ -1,9 +1,11 @@
-# Deep UNet for satellite image segmentation
+# UNet & ResUNet-a for satellite image segmentation
 
-![banner](https://i.imgur.com/hjITfpc.png)!
+I added a new network (ResUNet-a) & plotting:
+![unet_vs_resunet-a_patch128x128_train2000](https://user-images.githubusercontent.com/8675771/125795105-ad811709-898b-43fe-92f0-47cc8c721095.png)
+
 
 ## About this project
-This is a Keras based implementation of a deep UNet that performs satellite image segmentation.
+This is forked from https://github.com/reachsumit/deep-unet-for-satellite-image-segmentation, a Keras based implementation of a deep UNet that performs satellite image segmentation.
 
 ## Dataset
 * The dataset consists of 8-band commercial grade satellite imagery taken from SpaceNet dataset.

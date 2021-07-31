@@ -8,7 +8,7 @@ from tensorflow.python.keras.callbacks import ModelCheckpoint, EarlyStopping, Re
     TensorBoard, CSVLogger
 from keras_unet_collection import models
 
-N_BANDS = 3  # original: 8
+N_BANDS = 8
 N_CLASSES = 5  # buildings, roads, trees, crops and water
 CLASS_WEIGHTS = [0.2, 0.3, 0.1, 0.1, 0.3]
 N_EPOCHS = 50  # original: 150
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         tensorboard = TensorBoard(log_dir='./tensorboard_unet/', write_graph=True,
                                   write_images=True)
         model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=N_EPOCHS,
-                  verbose=2, shuffle=True,
+                  shuffle=True,
                   callbacks=[model_checkpoint, csv_logger, tensorboard, early_stopping],
                   validation_data=(x_val, y_val))
         return model
